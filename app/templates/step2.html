@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>皮の下の声 - ステップ2</title>
+</head>
+<body>
+    <h1>Step 2</h1>
+    <form method="post" action="{{ url_for('step3') }}">
+        {% for theme, options in step2.items() %}
+            <h3>{{ theme }}</h3>
+            {% for opt in options %}
+                <label><input type="radio" name="{{ theme }}" value="{{ opt.text }}">{{ opt.text }}</label><br>
+            {% endfor %}
+        {% endfor %}
+        <button type="submit">次へ</button>
+    </form>
+</body>
+</html>

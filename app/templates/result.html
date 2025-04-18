@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>皮の下の声 - 結果</title>
+</head>
+<body>
+    <body style="background-color: {{ background_color }};">
+
+    <h1>あなたの詩</h1>
+    <div>
+        {% for s in step1.values() %}<p>{{ s }}</p>{% endfor %}
+        {% for s in step2.values() %}<p>{{ s }}</p>{% endfor %}
+        {% for s in step3.values() %}<p>{{ s }}</p>{% endfor %}
+        <p><strong>エンディング:</strong> {{ result }}</p>
+        
+    </div>
+</body>
+</html>
